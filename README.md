@@ -3,8 +3,8 @@
 ![EfCore.Extension](Icon.png)
 
 [![Build](https://github.com/Atroxt/K.Extensions.EfCore/actions/workflows/build.yml/badge.svg)](https://github.com/Atroxt/K.Extensions.EfCore/actions/workflows/build.yml)
-![Nuget](https://img.shields.io/nuget/v/K.Extensions.Datetime?logo=nuget&color=blue)
-![Nuget](https://img.shields.io/nuget/dt/K.Extensions.Datetime?logo=nuget&color=blue&label=Downloads)
+![Nuget](https://img.shields.io/nuget/v/K.Extensions.EfCore?logo=nuget&color=blue)
+![Nuget](https://img.shields.io/nuget/dt/K.Extensions.EfCore?logo=nuget&color=blue&label=Downloads)
 # K.Extensions.EfCore
 is a .NET library that enables you to implement interfaces for your entities to support soft deletes and other functionalities.
 
