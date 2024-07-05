@@ -79,11 +79,11 @@ namespace K.Extensions.EfCore.Build.Services
                                     Name = "Create the package",
                                     Run = $@"dotnet pack .\src\{projectName}\{projectName}.csproj -v normal --configuration Release -o:nupkg"
                                 },
-                                new GithubTask()
-                                {
-                                    Name = "Push generated package to GitHub registry",
-                                    Run = "dotnet nuget push **/K.Extensions*.nupkg --source \"https://nuget.pkg.github.com/Atroxt/index.json\" --api-key ${{ secrets.GIT_TOKEN }} --skip-duplicate "
-                                },
+                                //new GithubTask()
+                                //{
+                                //    Name = "Push generated package to GitHub registry",
+                                //    Run = "dotnet nuget push **/K.Extensions*.nupkg --source \"https://nuget.pkg.github.com/Atroxt/index.json\" --api-key ${{ secrets.GIT_TOKEN }} --skip-duplicate "
+                                //},
                                 new GithubTask()
                                 {
                                     Name = "Push generated package to Nuget registry",
