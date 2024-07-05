@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "K.Extensions.EfCore", "src\K.Extensions.EfCore\K.Extensions.EfCore.csproj", "{8AC6DF85-C596-498F-AD5E-194C5F1E725C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "K.Extensions.EfCore.Tests", "src\K.Extensions.EfCore.Tests\K.Extensions.EfCore.Tests.csproj", "{94DDD29F-7B4E-47C1-9EAB-4E962167B3D7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "K.Extensions.EfCore.Build", "src\K.Extensions.EfCore.Build\K.Extensions.EfCore.Build.csproj", "{46B2E08B-A84B-4C60-9F39-5E5E932F8FFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projektmappenelemente", "Projektmappenelemente", "{C6DE466C-9EF9-4EDF-9D8E-AFF925303F63}"
+	ProjectSection(SolutionItems) = preProject
+		Icon.png = Icon.png
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AC6DF85-C596-498F-AD5E-194C5F1E725C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AC6DF85-C596-498F-AD5E-194C5F1E725C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AC6DF85-C596-498F-AD5E-194C5F1E725C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AC6DF85-C596-498F-AD5E-194C5F1E725C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94DDD29F-7B4E-47C1-9EAB-4E962167B3D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94DDD29F-7B4E-47C1-9EAB-4E962167B3D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94DDD29F-7B4E-47C1-9EAB-4E962167B3D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94DDD29F-7B4E-47C1-9EAB-4E962167B3D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B2E08B-A84B-4C60-9F39-5E5E932F8FFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B2E08B-A84B-4C60-9F39-5E5E932F8FFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B2E08B-A84B-4C60-9F39-5E5E932F8FFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B2E08B-A84B-4C60-9F39-5E5E932F8FFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1F497AA2-ED62-4DD0-91C4-9E02CE74E471}
+	EndGlobalSection
+EndGlobal

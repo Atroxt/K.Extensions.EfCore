@@ -1,0 +1,37 @@
+name: Build
+on:
+  push: 
+  pull_request:
+    branches:
+    - main
+jobs:
+  build:
+    name: Build
+    runs-on: windows-latest
+    steps:
+    - name: Check out
+      uses: actions/checkout@v4
+    - name: Setup .Net
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.302
+    - name: Restore
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Cobertura Tests
+      run: dotnet test --no-restore --verbosity normal --configuration Release --collect "XPlat Code Coverage" /p:CollectCodeCoverage=true --settings CodeCoverage.runsettings --results-directory "CoberturaTestResults-8.0.302"
+    - name: Upload coverage report artifact
+      uses: codecov/codecov-action@v4
+      with:
+        verbose: true
+        token: ${{ secrets.CODECOV_TOKEN }}
+        directory: CoberturaTestResults-8.0.302
+    - name: Create the package
+      run: dotnet pack .\src\K.Extensions.EfCore\K.Extensions.EfCore.csproj -v normal --configuration Release -o:nupkg
+    - name: Upload
+      if: ${{ always() }}
+      uses: actions/upload-artifact@v4
+      with:
+        name: NugetPackage-Artifacts
+        path: ./nupkg/*.nupkg

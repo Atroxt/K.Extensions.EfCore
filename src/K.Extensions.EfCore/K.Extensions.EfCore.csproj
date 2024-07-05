@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <langversion>latest</langversion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Link="docs\README.md" Pack="true" PackagePath="" />
+    <None Include="..\..\Icon.png" Link="docs\Icon.png" Pack="true" PackagePath="./images" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <Version>1.0.0</Version>
+    <Authors>Tino Kuehnel</Authors>
+    <Description>
+      EfCore Extension to extend the DbContext 
+    </Description>
+    <PackageIcon>images/Icon.png</PackageIcon>
+    <PackageTags>EfCore Extensions</PackageTags>
+    <PackageProjectUrl>https://github.com/Atroxt/K.Extensions.EfCore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Atroxt/K.Extensions.EfCore.git</RepositoryUrl>
+
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+  </ItemGroup>
+
+</Project>
