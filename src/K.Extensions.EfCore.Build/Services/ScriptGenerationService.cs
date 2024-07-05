@@ -65,7 +65,7 @@ namespace K.Extensions.EfCore.Build.Services
                                 new GithubTask()
                                 {
                                     Name = "Upload coverage report artifact",
-                                    Uses = "codecov/codecov-action@v4",
+                                    Uses = "codecov/codecov-action@v4.0.1",
                                     With = new Dictionary<string, string>()
                                     {
                                         {"verbose","true"},
@@ -79,16 +79,16 @@ namespace K.Extensions.EfCore.Build.Services
                                     Name = "Create the package",
                                     Run = $@"dotnet pack .\src\{projectName}\{projectName}.csproj -v normal --configuration Release -o:nupkg"
                                 },
-                                //new GithubTask()
-                                //{
-                                //    Name = "Push generated package to GitHub registry",
-                                //    Run = "dotnet nuget push **/K.Extensions*.nupkg --source \"https://nuget.pkg.github.com/Atroxt/index.json\" --api-key ${{ secrets.GIT_TOKEN }} --skip-duplicate "
-                                //},
-                                //new GithubTask()
-                                //{
-                                //    Name = "Push generated package to Nuget registry",
-                                //    Run = "dotnet nuget push **/K.Extensions*.nupkg --source \"https://api.nuget.org/v3/index.json\" --api-key ${{ secrets.NUGET_APIKEYTOKEN }} --skip-duplicate "
-                                //},
+                                new GithubTask()
+                                {
+                                    Name = "Push generated package to GitHub registry",
+                                    Run = "dotnet nuget push **/K.Extensions*.nupkg --source \"https://nuget.pkg.github.com/Atroxt/index.json\" --api-key ${{ secrets.GIT_TOKEN }} --skip-duplicate "
+                                },
+                                new GithubTask()
+                                {
+                                    Name = "Push generated package to Nuget registry",
+                                    Run = "dotnet nuget push **/K.Extensions*.nupkg --source \"https://api.nuget.org/v3/index.json\" --api-key ${{ secrets.NUGET_APIKEYTOKEN }} --skip-duplicate "
+                                },
                                 new GithubTask()
                                 {
                                     Name = "Upload",
